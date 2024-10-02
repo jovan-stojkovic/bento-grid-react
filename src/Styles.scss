@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+$Purple100: rgb(218, 207, 252);
+$Purple500: rgb(118, 80, 220);
+$Yellow100: rgb(249, 238, 225);
+$Yellow500: rgb(255, 203, 107);
+$White: rgb(255, 255, 255);
+$Black: rgb(18, 18, 18);
+$font: "DM Sans", sans-serif;
+
+@mixin flex($align: center, $justify: center, $direction: row) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $direction;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: $font;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+main {
+    width: 100%;
+    background-color: rgb(241, 241, 241);
+
+    .app {
+        width: 375px;
+        margin: 0 auto;
+        @include flex($direction: column);
+        gap: 50px;
+
+        section {
+            padding: 20px;
+            border-radius: 10px;
+
+            &.one {
+                background-color: $Purple500;
+
+                
+            }
+        }
+    }
+}
