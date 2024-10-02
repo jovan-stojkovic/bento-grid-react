@@ -194,8 +194,8 @@ main {
         }
 
         img {
-            width: 65%;
-            margin-top: 15px;
+          width: 65%;
+          margin-top: 15px;
         }
       }
 
@@ -203,16 +203,194 @@ main {
         background-color: $Yellow500;
 
         h2 {
-            font-size: 32px;
-            font-weight: 600;
-            letter-spacing: -1px;
-            line-height: 30px;
-            margin: 10px 0;
+          font-size: 32px;
+          font-weight: 600;
+          letter-spacing: -1px;
+          line-height: 30px;
+          margin: 10px 0;
         }
 
         img {
+          width: 80%;
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 950px) {
+  main {
+    width: 100%;
+    height: 100vh;
+    background-color: $AlmostWhite;
+    @include flex();
+
+    .app {
+      width: 1200px;
+      height: 1000px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(10, 1fr);
+      align-items: start;
+      gap: 25px;
+      padding: 50px 0;
+
+      section {
+        width: 100%;
+        height: 100%;
+
+        &.one {
+          grid-column: 2 / 4;
+          grid-row: 1 / 5;
+          padding: 50px;
+
+          h1 {
+            font-size: 65px;
+            line-height: 55px;
+
+            span {
+              font-size: 65px;
+            }
+          }
+
+          img {
+            width: 40%;
+          }
+        }
+
+        &.two {
+          grid-column: 2;
+          grid-row: 5 / 8;
+
+          img {
+            width: 148%;
+          }
+
+          h3 {
+            font-size: 32px;
+            letter-spacing: 0px;
+            line-height: 28px;
+          }
+        }
+
+        &.three {
+          grid-column: 3;
+          grid-row: 5 / 8;
+
+          h3 {
+            font-size: 32px;
+            letter-spacing: 0px;
+            line-height: 28px;
+          }
+
+          img {
+            width: 100%;
+            margin-bottom: -40%;
+          }
+        }
+
+        &.four {
+          background-color: $Purple100;
+          grid-column: 4;
+          grid-row: 1 / 8;
+          padding: 50px 30px;
+
+          h3 {
+            font-size: 32px;
+            letter-spacing: 0px;
+            line-height: 28px;
+            text-align: left;
+          }
+
+          img {
+            width: 180%;
+            margin: 10px 0;
+          }
+
+          p {
+            text-align: left;
+            letter-spacing: 0;
+            font-size: 20px;
+            line-height: 20px;
+          }
+        }
+
+        &.five {
+          @include flex($direction: row, $justify: space-between);
+          grid-column: 3 / 5;
+          grid-row: 8 / 11;
+
+          img {
+            width: auto;
+            height: 100%;
+          }
+
+          h2 {
+            font-size: 40px;
+            letter-spacing: 0px;
+            line-height: 35px;
+            text-align: left;
+          }
+        }
+
+        &.six {
+          grid-column: 2;
+          grid-row: 8 / 11;
+
+          p {
+            text-align: left;
+            letter-spacing: 0;
+            font-size: 20px;
+
+            &.large {
+              font-size: 60px;
+            }
+          }
+
+          img {
             width: 80%;
-            margin-top: 15px;
+          }
+        }
+
+        &.seven {
+          grid-column: 1;
+          grid-row: 1/6;
+          padding: 50px 30px;
+
+          h2 {
+            font-size: 41px;
+            letter-spacing: 0px;
+            line-height: 35px;
+            text-align: left;
+
+            span {
+              font-size: 41px;
+              letter-spacing: 0px;
+            }
+          }
+
+          img {
+            width: 100%;
+            margin-top: 30px;
+          }
+        }
+
+        &.eight {
+          background-color: $Yellow500;
+          grid-column: 1;
+          grid-row: 6 / 11;
+
+          h2 {
+            font-size: 41px;
+            letter-spacing: 0px;
+            line-height: 35px;
+          }
+
+          img {
+            width: 100%;
+            margin-top: 30px;
+          }
         }
       }
     }
