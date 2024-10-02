@@ -9,16 +9,16 @@ const App = () => {
         <section className="one">
           <h1>
             Social Media <span className="yellow">10x</span>{" "}
-            <span className="italic">Faster</span>with AI
+            <span className="italic">Faster</span> with AI
           </h1>
           <img src="/illustration-five-stars.webp" alt="five stars" />
           <p>Over 4,000 5-star reviews</p>
         </section>
 
-        <secion className="two">
+        <section className="two">
           <img src="/illustration-multiple-platforms.webp" alt="social" />
           <h3>Manage multiple accounts and platforms.</h3>
-        </secion>
+        </section>
 
         <section className="three">
           <h3>Maintain a consistent posting schedule.</h3>
@@ -48,7 +48,7 @@ const App = () => {
         <section className="seven">
           <h2>
             Create and schedule content{" "}
-            <span className="italic purple">quicker</span>.
+            <span className="italic purple">quicker.</span>
           </h2>
           <img src="/illustration-create-post.webp" alt="create post" />
         </section>

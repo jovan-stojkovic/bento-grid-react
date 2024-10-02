@@ -5,6 +5,7 @@ $Purple500: rgb(118, 80, 220);
 $Yellow100: rgb(249, 238, 225);
 $Yellow500: rgb(255, 203, 107);
 $White: rgb(255, 255, 255);
+$AlmostWhite: rgb(249, 246, 249);
 $Black: rgb(18, 18, 18);
 $font: "DM Sans", sans-serif;
 
@@ -25,24 +26,195 @@ $font: "DM Sans", sans-serif;
 }
 
 main {
-    width: 100%;
-    background-color: rgb(241, 241, 241);
+  width: 100%;
+  background-color: $AlmostWhite;
 
-    .app {
-        width: 375px;
-        margin: 0 auto;
+  .app {
+    width: 375px;
+    margin: 0 auto;
+    @include flex($direction: column);
+    gap: 30px;
+    padding: 50px 0;
+
+    section {
+      padding: 20px;
+      border-radius: 10px;
+      width: 90%;
+      overflow: hidden;
+
+      &.one {
+        background-color: $Purple500;
         @include flex($direction: column);
-        gap: 50px;
+        padding: 50px 20px;
 
-        section {
-            padding: 20px;
-            border-radius: 10px;
+        h1 {
+          font-size: 50px;
+          font-weight: 500;
+          color: $White;
+          text-align: center;
+          line-height: 45px;
 
-            &.one {
-                background-color: $Purple500;
-
-                
+          span {
+            font-size: 50px;
+            font-weight: 500;
+            &.yellow {
+              color: $Yellow500;
             }
+
+            &.italic {
+              font-style: italic;
+            }
+          }
         }
+
+        img {
+          width: 70%;
+          margin-top: 20px;
+          margin-bottom: 5px;
+        }
+
+        p {
+          color: white;
+        }
+      }
+
+      &.two {
+        background-color: white;
+
+        img {
+          width: 100%;
+        }
+
+        h3 {
+          font-size: 25px;
+          font-weight: 600;
+          letter-spacing: -1px;
+          line-height: 22px;
+          margin: 10px 0;
+        }
+      }
+
+      &.three {
+        background-color: $Yellow500;
+
+        h3 {
+          font-size: 25px;
+          font-weight: 600;
+          letter-spacing: -1px;
+          line-height: 22px;
+          margin: 10px 0;
+        }
+
+        img {
+          width: 73%;
+          margin-bottom: -45px;
+        }
+      }
+
+      &.four {
+        background-color: $Purple100;
+
+        h3 {
+          font-size: 25px;
+          font-weight: 600;
+          letter-spacing: -1px;
+          line-height: 22px;
+          margin: 10px 0;
+          text-align: center;
+        }
+
+        img {
+          width: 100%;
+          margin: 10px 0;
+        }
+
+        p {
+          text-align: center;
+          letter-spacing: -1px;
+          font-weight: 500;
+        }
+      }
+
+      &.five {
+        background-color: $Purple500;
+        @include flex($direction: column, $justify: space-between);
+        gap: 30px;
+
+        img {
+          width: 80%;
+        }
+
+        h2 {
+          font-size: 32px;
+          width: 70%;
+          font-weight: 600;
+          letter-spacing: -1px;
+          line-height: 30px;
+          margin: 10px 0;
+          text-align: center;
+          color: white;
+        }
+      }
+
+      &.six {
+        background-color: white;
+
+        p {
+          font-weight: 500;
+
+          &.large {
+            font-size: 45px;
+            font-weight: 500;
+          }
+        }
+
+        img {
+          width: 60%;
+          margin-top: 20px;
+        }
+      }
+
+      &.seven {
+        background-color: $Yellow100;
+
+        h2 {
+          font-size: 32px;
+          font-weight: 600;
+          letter-spacing: -1px;
+          line-height: 30px;
+          margin: 10px 0;
+
+          span {
+            font-size: 32px;
+            font-weight: 600;
+            letter-spacing: -1px;
+            color: $Purple500;
+            font-style: italic;
+          }
+        }
+
+        img {
+            width: 65%;
+            margin-top: 15px;
+        }
+      }
+
+      &.eight {
+        background-color: $Yellow500;
+
+        h2 {
+            font-size: 32px;
+            font-weight: 600;
+            letter-spacing: -1px;
+            line-height: 30px;
+            margin: 10px 0;
+        }
+
+        img {
+            width: 80%;
+            margin-top: 15px;
+        }
+      }
     }
+  }
 }
